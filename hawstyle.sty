@@ -204,10 +204,11 @@
           \bfseries\huge\theHAWThesisTitle
 
           \bigskip
-          \normalfont\normalsize\theHAWThesisAuthor
+          \large\theHAWThesisSubTitle\par
 
           \bigskip
-          \large\theHAWThesisSubTitle\par
+          \normalfont\normalsize\theHAWThesisAuthor
+
         }}%
       \end{minipage}%
     }
@@ -265,7 +266,7 @@
         %% put the box on the right side
         \hspace*{0.15\textwidth}
         \parbox[t]{0.7\textwidth}{%
-        {\centering\huge\theHAWThesisTitle\\
+        {\bfseries\centering\huge\theHAWThesisTitle\\
          \ifthenelse{\equal{\theHAWThesisSubTitle}{}}{}{
            \medskip\LARGE\theHAWThesisSubTitle\\}%
         
