@@ -196,15 +196,15 @@
       %% center the minipage
       \begin{minipage}[l][10cm][c]{\paperwidth}%
         %% put the box on the right side
-        \hspace*{0.25\textwidth}
+        \hspace*{0.15\textwidth}
         \parbox[t]{0.7\textwidth}{%
           {\centering\bfseries\Large\theHAWThesisType
 
-          \bigskip
-          \normalfont\normalsize\theHAWThesisAuthor
-
           \vspace{2em}
           \bfseries\huge\theHAWThesisTitle
+
+          \bigskip
+          \normalfont\normalsize\theHAWThesisAuthor
 
           \bigskip
           \large\theHAWThesisSubTitle\par
@@ -241,36 +241,78 @@
 % internal function
 \newcommand*{\haw@Title}{
   \begingroup
-  \enlargethispage{\footskip}
-  \thispagestyle{empty}
-  \setlength{\parindent}{0em} %% remove indent
-  {\centering\Large\theHAWThesisAuthor\\
-    \bigskip
-    \bfseries\theHAWThesisTitle\\
-    \ifthenelse{\equal{\theHAWThesisSubTitle}{}}{}{
-      \medskip\large\theHAWThesisSubTitle\\}%
-  }
-  \vfill
-  \ifthenelse{\NOT\equal{\theHAWThesisType}{} \AND
-    \NOT\equal{\theHAWExaminationType}{} \AND
-    \NOT\equal{\theHAWDegreeProgramme}{}}{
-    \theHAWThesisType\ eingereicht im Rahmen des \theHAWExaminationType\\ \par
-    im Studiengang \theHAWDegreeProgramme\\
-    am Department Soziale Arbeit\\
-    der Fakult\"at Wirtschaft und Soziales\\
-    der Hochschule für Angewandte Wissenschaften Hamburg\par
-  \bigskip}
+  \thispagestyle{empty}%
+  \enlargethispage{\footskip}%
+  \setlength{\parindent}{0em} % remove indent
+  % \sffamily % the title page in sans serif
+  
+  \begin{textblock*}{2cm}(10cm,2cm)
+    \begin{minipage}[r]{\textwidth}%
+      \if@haw@printer % hide logo if printer is true
+      % \relax
+      \includegraphics[width=10cm]{HAW_logo}%
+      \else
+      \includegraphics[width=10cm]{HAW_logo}%
+      \fi
+    \end{minipage}%
+  \end{textblock*}
+  
+  
+  \begin{textblock*}{10cm}(0cm,9cm)
+      %% use a minipage that is the size of the colored banner
+      %% center the minipage
+      \begin{minipage}[l][10cm][c]{\paperwidth}%
+        %% put the box on the right side
+        \hspace*{0.15\textwidth}
+        \parbox[t]{0.7\textwidth}{%
+        {\centering\huge\theHAWThesisTitle\\
+         \ifthenelse{\equal{\theHAWThesisSubTitle}{}}{}{
+           \medskip\LARGE\theHAWThesisSubTitle\\}%
+        
+          \bigskip
+          \bfseries\normalsize\theHAWThesisAuthor\\
+        }
+        }%
+      \end{minipage}%
+  \end{textblock*}
 
-  \@tempcnta=0
-  \def\and{\strut\\
-    \advance\@tempcnta by 1
-    \ifcase\@tempcnta Betreuender Prüfer:\ \ignorespaces
-    \or Zweitgutachter:\ \ignorespaces 
-    \fi
-  }%
-  \ifthenelse{\not\equal{\theHAWExperts}{}}{%
-    Betreuender Prüfer:\ \ignorespaces\theHAWExperts\par \bigskip} \par
-  Eingereicht am: \theHAWReleaseDate
+  \begin{textblock*}{10cm}(0cm,19cm)
+      %% use a minipage that is the size of the colored banner
+      %% center the minipage
+      \begin{minipage}[l][10cm][c]{\paperwidth}%
+        %% put the box on the right side
+        \hspace*{0.15\textwidth}
+        \parbox[t]{0.7\textwidth}{%
+        {
+        \ifthenelse{\NOT\equal{\theHAWThesisType}{} \AND
+          \NOT\equal{\theHAWExaminationType}{} \AND
+          \NOT\equal{\theHAWDegreeProgramme}{}}{
+          \theHAWThesisType\ eingereicht im Rahmen des \theHAWExaminationType\\ \par
+          im Studiengang \theHAWDegreeProgramme\\
+          am Department Soziale Arbeit\\
+          der Fakult\"at Wirtschaft und Soziales\\
+          der Hochschule für Angewandte Wissenschaften Hamburg\par
+        \bigskip}
+
+        \@tempcnta=0
+        \def\and{\strut\\
+          \advance\@tempcnta by 1
+          \ifcase\@tempcnta Betreuender Prüfer:\ \ignorespaces
+          \or Zweitgutachter:\ \ignorespaces 
+          \fi
+        }%
+        \ifthenelse{\not\equal{\theHAWExperts}{}}{%
+          Betreuender Prüfer:\ \ignorespaces\theHAWExperts\par \bigskip} \par
+        Eingereicht am: \theHAWReleaseDate
+        
+        }
+        }%
+      \end{minipage}%
+  \end{textblock*}
+  
+  
+  % \vfill
+  \null\newpage
   \endgroup
 }
 
