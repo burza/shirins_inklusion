@@ -183,8 +183,8 @@
 \tableofcontents
 \newpage
 %% enable if these lists should be shown on their own page
-\listoftables
-\listoffigures
+% \listoftables
+% \listoffigures
 % \lstlistoflistings
 
 %% main
@@ -206,46 +206,46 @@
 %---------------------------------------------------------------------------------------------------
 % Der dritte Teil der Arbeit
 %---------------------------------------------------------------------------------------------------
-\typeout{===== File: ZUSAMMENFASSUNG}
-\input{kapitel/schluss/reflexion}
+% \typeout{===== File: ZUSAMMENFASSUNG}
+% \input{kapitel/schluss/fazit}
 
 
 %%%%
 
 % \clearpage
 \cleardoublepage
-\typeout{===== Section: Anhang}
-\appendix
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Kinderankreuzliste,chap:anhang_1}, scale=0.80, offset=6mm -5mm]{anhang_1.pdf}
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Berechnung für die Arbeit am Kind,chap:anhang_2}, scale=0.80, offset=6mm -5mm]{anhang_2.pdf} 
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Personalbedarf,chap:anhang_3}, scale=0.80, offset=6mm -5mm]{anhang_3.pdf}
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Dienstplanberechnung,chap:anhang_4}, scale=0.80, offset=6mm -5mm]{anhang_4.pdf}
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Verfassung der KiTa,chap:anhang_5}, scale=0.80, offset=6mm -5mm]{anhang_5.pdf}
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Grundriss der KiTa,chap:anhang_6}, scale=0.80, offset=6mm -5mm]{anhang_6.pdf}
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Beobachtungsbogen,chap:anhang_7}, scale=0.80, offset=6mm -5mm]{anhang_7.pdf}
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Einzel Soziogramm,chap:anhang_8}, scale=0.80, offset=6mm -5mm]{anhang_8.pdf}
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Kinderfragebogen,chap:anhang_9}, scale=0.80, offset=6mm -5mm]{anhang_9.pdf}
-
-\includepdfset{pagecommand={\pagestyle{scrheadings}}}
-\includepdf[pages=-, addtotoc={1,chapter,0,Meinungsbild Mittagessen,chap:anhang_10}, scale=0.80, offset=6mm -5mm]{anhang_10.pdf}
+% \typeout{===== Section: Anhang}
+% \appendix
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Kinderankreuzliste,chap:anhang_1}, scale=0.80, offset=6mm -5mm]{anhang_1.pdf}
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Berechnung für die Arbeit am Kind,chap:anhang_2}, scale=0.80, offset=6mm -5mm]{anhang_2.pdf} 
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Personalbedarf,chap:anhang_3}, scale=0.80, offset=6mm -5mm]{anhang_3.pdf}
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Dienstplanberechnung,chap:anhang_4}, scale=0.80, offset=6mm -5mm]{anhang_4.pdf}
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Verfassung der KiTa,chap:anhang_5}, scale=0.80, offset=6mm -5mm]{anhang_5.pdf}
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Grundriss der KiTa,chap:anhang_6}, scale=0.80, offset=6mm -5mm]{anhang_6.pdf}
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Beobachtungsbogen,chap:anhang_7}, scale=0.80, offset=6mm -5mm]{anhang_7.pdf}
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Einzel Soziogramm,chap:anhang_8}, scale=0.80, offset=6mm -5mm]{anhang_8.pdf}
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Kinderfragebogen,chap:anhang_9}, scale=0.80, offset=6mm -5mm]{anhang_9.pdf}
+% 
+% \includepdfset{pagecommand={\pagestyle{scrheadings}}}
+% \includepdf[pages=-, addtotoc={1,chapter,0,Meinungsbild Mittagessen,chap:anhang_10}, scale=0.80, offset=6mm -5mm]{anhang_10.pdf}
 
 % bibliography and other stuff
 \backmatter
@@ -257,13 +257,13 @@
 \bibliographystyle{natdin}
 \bibliography{literatur}
 
-\typeout{===== Section: Glossar}
-\renewcommand{\glossaryname}{Glossar}
-\cleardoublepage  
-\phantomsection
-\addcontentsline{toc}{chapter}{Glossar}
-\clearpage
-\printglossaries
+% \typeout{===== Section: Glossar}
+% \renewcommand{\glossaryname}{Glossar}
+% \cleardoublepage  
+% \phantomsection
+% \addcontentsline{toc}{chapter}{Glossar}
+% \clearpage
+% \printglossaries
 
 %% index
 % \typeout{===== Section: Index}
